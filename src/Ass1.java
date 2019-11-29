@@ -62,16 +62,15 @@ public class Ass1 {
                     System.out.println(subName + ":" + Collections.frequency(allOccurenrces, subName));
                 }
 
-                System.out.println("------------------");
             }
         }
     }
 
     ///##### 1.3 #####
-    private static HashMap CountMaxString(int N) {
+    private static void CountMaxString(int N) {
         if (N < 0) {
             System.out.println("Please enter a valid number");
-            return null;
+
         } else {
             // make a dict of all the subs in all the namesList
             HashMap<String, Integer> allSubsDict = new HashMap<>();
@@ -104,7 +103,7 @@ public class Ass1 {
                 if (allSubsDict.get(key) == Collections.max(allSubsDict.entrySet(), (entry1, entry2) -> entry1.getValue() - entry2.getValue()).getValue())
                     System.out.println(key);
             }
-            return allSubsDict;
+
         }
 
     }
